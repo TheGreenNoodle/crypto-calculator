@@ -1,0 +1,30 @@
+.padding {
+  margin: 120px 0;
+  padding: 20px;
+
+  background-color: green;
+  display: inline-block;
+  border-radius: 10%;
+}
+
+/* Buttons */
+.customBtn {
+  background-color: orange;
+  color: pink;
+  border-color: black;
+  display: inline-block;
+  margin: 20px;
+  height: 80px;
+  width: 100px;
+}
+
+/* Don't repeat styles here. Only have width change*/
+.customBtnMarket {
+  background-color: orange;
+  color: pink;
+  border-color: black;
+  display: inline-block;
+  margin: 20px;
+  height: 80px;
+  width: 130px;
+}
