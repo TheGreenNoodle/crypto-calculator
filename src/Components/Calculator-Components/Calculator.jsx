@@ -1,23 +1,56 @@
 import { useState } from "react";
 import { Container, Row } from "react-bootstrap";
-import calculatorStyles from "../../CSS/Calculator.module.css";
 import CalcBtn from "./CalculatorButtons";
 import InputCalculations from "./InputCalculations";
+import calculatorStyles from "../../CSS/Calculator.module.css";
+
+const customBtn = calculatorStyles.customBtn;
+const activeBtn = `${customBtn} ${calculatorStyles.activeBtn}`;
+const capBtn = calculatorStyles.customBtnMarket;
 
 function Calculator() {
-  // const [calc, setCalc] = useState({
-  //   price: {
-  //     false,
-  //     name: ""
-  //   }
-  // });
+  const [toCalc, setToCalc] = useState({
+    toFind: "Price",
+    firstInput: "Supply",
+    secondInput: "Marketcap",
+    priceActive: true,
+    supplyActive: false,
+    capActive: false,
+  });
 
-  const [price, setPrice] = useState(false);
-  const [name, setName] = useState("");
+  function calculatePrice(btn) {
+    const name = btn.target.name;
+    if (name === "Price") {
+      setToCalc({
+        toFind: name,
+        firstInput: "Supply",
+        secondInput: "Marketcap",
 
-  function calculatePrice() {
-    price ? setPrice(false) : setPrice(true);
-    setName();
+        priceActive: true,
+        supplyActive: false,
+        capActive: false,
+      });
+    } else if (name === "Marketcap") {
+      setToCalc({
+        toFind: name,
+        firstInput: "Price",
+        secondInput: "Supply",
+
+        priceActive: false,
+        supplyActive: false,
+        capActive: true,
+      });
+    } else if (name === "Supply") {
+      setToCalc({
+        toFind: name,
+        firstInput: "Price",
+        secondInput: "Marketcap",
+
+        priceActive: false,
+        supplyActive: true,
+        capActive: false,
+      });
+    }
   }
 
   return (
@@ -28,25 +61,33 @@ function Calculator() {
         </Row>
         <Row>
           <CalcBtn
-            onClick={calculatePrice}
-            className={calculatorStyles.customBtn}
+            changeInputs={calculatePrice}
+            className={toCalc.priceActive ? activeBtn : customBtn}
             btnName="Price"
+            name="Price"
           ></CalcBtn>
+
           <CalcBtn
-            onClick={calculatePrice}
+            changeInputs={calculatePrice}
             className={
-              (calculatorStyles.customBtn, calculatorStyles.customBtnMarket)
+              toCalc.capActive
+                ? `${activeBtn} ${capBtn}`
+                : `${customBtn} ${capBtn}`
             }
             btnName="Marketcap"
+            name="Marketcap"
           ></CalcBtn>
+
           <CalcBtn
-            onClick={calculatePrice}
-            className={calculatorStyles.customBtn}
+            changeInputs={calculatePrice}
+            className={toCalc.supplyActive ? activeBtn : customBtn}
             btnName="Supply"
+            name="Supply"
           ></CalcBtn>
         </Row>
-
-        <Row>{price ? <InputCalculations /> : null}</Row>
+        <Row>
+          <InputCalculations find={toCalc} />
+        </Row>
       </Container>
     </div>
   );

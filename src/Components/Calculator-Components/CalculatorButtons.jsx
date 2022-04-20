@@ -1,10 +1,14 @@
 import { Button, Col } from "react-bootstrap";
-import calculatorStyles from "../../CSS/Calculator.module.css";
 
 function CalcBtn(props) {
   return (
     <Col>
-      <Button onClick={props.onClick} className={props.className} size="lg">
+      <Button
+        onClick={props.changeInputs}
+        className={props.className}
+        name={props.name}
+        size="lg"
+      >
         {props.btnName}
       </Button>
     </Col>

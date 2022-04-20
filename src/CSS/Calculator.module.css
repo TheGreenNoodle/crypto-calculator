@@ -17,14 +17,10 @@
   height: 80px;
   width: 100px;
 }
-
-/* Don't repeat styles here. Only have width change*/
+.activeBtn {
+  background-color: lightBlue;
+  color: white;
+}
 .customBtnMarket {
-  background-color: orange;
-  color: pink;
-  border-color: black;
-  display: inline-block;
-  margin: 20px;
-  height: 80px;
   width: 130px;
 }
