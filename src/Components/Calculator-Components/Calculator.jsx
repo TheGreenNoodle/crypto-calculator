@@ -1,71 +1,44 @@
 import { useState } from "react";
 import { Container, Row } from "react-bootstrap";
 import CalcBtn from "./CalculatorButtons";
-import InputCalculations from "./InputCalculations";
-import ShowAnswer from "./ShowAnswer";
+import OutputAnswer from "./OutputAnswer";
+import DoCalculations from "./DoCalculations";
+import { changeCalc } from "./CalculatorFunctions";
+
+//putCustom buttons in own file
 import calculatorStyles from "../../CSS/Calculator.module.css";
 
 const customBtn = calculatorStyles.customBtn;
 const activeBtn = `${customBtn} ${calculatorStyles.activeBtn}`;
-const capBtn = calculatorStyles.customBtnMarket;
+const capBtn = calculatorStyles.customBtnMarket; //marketcap btn custom style
 
 function Calculator() {
-  // Put all of this into another compant
-  const [gotAnswer, setGotAnswer] = useState(false);
-  const [toCalc, setToCalc] = useState({
-    toFind: "Marketcap",
+  const [answer, setAnswer] = useState("Anwser Here"); //Holds the value of answer. //Recived from <DoCalculations />
+  const [calculate, setCalculate] = useState({
+    //object that holds inputs and what user is trying to calculate for.
+    toFind: "Marketcap", //what user wants to find.
     firstInput: "Price",
     secondInput: "Supply",
-    priceActive: false,
-    supplyActive: false,
-    capActive: true,
+
+    //Shows active button if set to true.
+    //This is so the user knows the value they are finding.
+    findingPrice: false,
+    findingSupply: false,
+    findingMarketcap: true,
   });
 
-  function setToFind(btn) {
-    const name = btn.target.name;
-    if (name === "Price") {
-      setGotAnswer(false);
-
-      setToCalc({
-        toFind: name,
-        firstInput: "Supply",
-        secondInput: "Marketcap",
-
-        priceActive: true,
-        supplyActive: false,
-        capActive: false,
-      });
-    } else if (name === "Marketcap") {
-      setGotAnswer(false);
-
-      setToCalc({
-        toFind: name,
-        firstInput: "Price",
-        secondInput: "Supply",
-
-        priceActive: false,
-        supplyActive: false,
-        capActive: true,
-      });
-    } else if (name === "Supply") {
-      setGotAnswer(false);
-
-      setToCalc({
-        toFind: name,
-        firstInput: "Price",
-        secondInput: "Marketcap",
-
-        priceActive: false,
-        supplyActive: true,
-        capActive: false,
-      });
-    }
+  function handleChangeCalc(btn) {
+    //Actives when the user clicks on a new button such as price or marketcap.
+    const btnName = btn.target.name; //holds the name of the button clicked.
+    //Passes over button name and setCalculate to CalculatorFunctions.
+    //Updates value of calculate to new values based on the btnName.
+    changeCalc({ btnName, setCalculate });
   }
-  // Put all of this into another compant
-  let answer = "";
+
   function showAnswer(soultion) {
-    setGotAnswer(true);
-    answer = soultion;
+    //Applies calculations to answer const.
+    //soultion recived from <DoCalculations />
+    setAnswer(soultion);
   }
 
   return (
@@ -76,36 +49,35 @@ function Calculator() {
         </Row>
         <Row>
           <CalcBtn
-            changeInputs={setToFind}
-            className={toCalc.priceActive ? activeBtn : customBtn}
+            changeCalculate={handleChangeCalc} //On button click activates handleChangeCalc.
+            className={calculate.findingPrice ? activeBtn : customBtn} //Used to change styles based on if the button is active or not.
             btnName="Price"
-            name="Price"
           ></CalcBtn>
 
           <CalcBtn
-            changeInputs={setToFind}
+            changeCalculate={handleChangeCalc}
             className={
-              toCalc.capActive
+              calculate.findingMarketcap //special style applied to make this btn wider than the rest.
                 ? `${activeBtn} ${capBtn}`
                 : `${customBtn} ${capBtn}`
             }
             btnName="Marketcap"
-            name="Marketcap"
           ></CalcBtn>
 
           <CalcBtn
-            changeInputs={setToFind}
-            className={toCalc.supplyActive ? activeBtn : customBtn}
+            changeCalculate={handleChangeCalc}
+            className={calculate.findingSupply ? activeBtn : customBtn}
             btnName="Supply"
-            name="Supply"
           ></CalcBtn>
         </Row>
+        {/* Passes over what the user wants to find. Changes the input names.
+        Dose some math based on inputs. Returns the anwser. */}
         <Row>
-          {gotAnswer ? (
-            <ShowAnswer answer={answer} />
-          ) : (
-            <InputCalculations find={toCalc} showAnswer={showAnswer} />
-          )}
+          <DoCalculations toCalculate={calculate} showAnswer={showAnswer} />
+        </Row>
+        <Row>
+          {/*passes button name over and the anwser. Renders both.*/}
+          <OutputAnswer toFind={calculate.toFind} answer={answer} />
         </Row>
       </Container>
     </div>
