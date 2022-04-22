@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { InputGroup, FormControl, Button } from "react-bootstrap";
+import { Button, Row } from "react-bootstrap";
+import Inputs from "./Inputs";
+import OutputAnswer from "./OutputAnswer";
 import { addInputsToValueArray, findSoultion } from "./CalculatorFunctions";
 import calculatorStyles from "../../CSS/Calculator.module.css";
 
@@ -8,11 +10,10 @@ function DoCalc(props) {
   const firstInputName = props.toCalculate.firstInput;
   const secondInputName = props.toCalculate.secondInput;
 
-  // Put all of this into another compant.
   // Holds two values so that will be used to find final answer.
   const [valuesArray, setValuesArray] = useState(["", ""]);
   // holds final answer.
-  const [answer, setAnswer] = useState("");
+  const [answer, setAnswer] = useState("Anwser Here");
 
   function handleInputs(inputs) {
     // When inputs onChange is activated it passes over the values
@@ -38,40 +39,20 @@ function DoCalc(props) {
 
   return (
     <div>
-      <InputGroup className="mb-3">
-        <InputGroup.Text id="inputGroup-sizing-default">
-          {firstInputName} {/*Renders name of first input*/}
-        </InputGroup.Text>
-        <FormControl
-          aria-label="Default"
-          aria-describedby="inputGroup-sizing-default"
-          placeholder={"Enter " + firstInputName.toLowerCase() + " here"}
-          type="Number"
-          onChange={handleInputs} //Runs handleInput to update valuesArray
-          name={firstInputName}
-          value={valuesArray[0]}
-        />
-      </InputGroup>
-
-      <InputGroup className="mb-3">
-        <InputGroup.Text id="inputGroup-sizing-default">
-          {secondInputName} {/*Renders name of second input*/}
-        </InputGroup.Text>
-        <FormControl
-          aria-label="Default"
-          aria-describedby="inputGroup-sizing-default"
-          placeholder={"Enter " + secondInputName.toLowerCase() + " here"}
-          type="Number"
-          onChange={handleInputs}
-          name={secondInputName}
-          value={valuesArray[1]}
-        />
-      </InputGroup>
+      <Inputs
+        name={firstInputName}
+        handleInputs={handleInputs}
+        value={valuesArray[0]}
+      />
+      <Inputs
+        name={secondInputName}
+        handleInputs={handleInputs}
+        value={valuesArray[1]}
+      />
 
       <Button
         onClick={() => {
           handleSubmit(); //Tells programs to run calculations
-          props.showAnswer(answer); //Passes over anwser to calculator
           setValuesArray(["", ""]); //Resets array
         }}
         className={`${calculatorStyles.customBtn} ${calculatorStyles.customBtnMarket}`}
@@ -79,6 +60,10 @@ function DoCalc(props) {
       >
         Submit
       </Button>
+      <Row>
+        {/*passes button name over and the anwser. Renders both.*/}
+        <OutputAnswer toFind={toFind} answer={answer} />
+      </Row>
     </div>
   );
 }

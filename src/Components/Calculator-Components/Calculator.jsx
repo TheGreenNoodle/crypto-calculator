@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Container, Row } from "react-bootstrap";
 import CalcBtn from "./CalculatorButtons";
-import OutputAnswer from "./OutputAnswer";
 import DoCalculations from "./DoCalculations";
 import { changeCalc } from "./CalculatorFunctions";
 
@@ -13,7 +12,6 @@ const activeBtn = `${customBtn} ${calculatorStyles.activeBtn}`;
 const capBtn = calculatorStyles.customBtnMarket; //marketcap btn custom style
 
 function Calculator() {
-  const [answer, setAnswer] = useState("Anwser Here"); //Holds the value of answer. //Recived from <DoCalculations />
   const [calculate, setCalculate] = useState({
     //object that holds inputs and what user is trying to calculate for.
     toFind: "Marketcap", //what user wants to find.
@@ -35,12 +33,6 @@ function Calculator() {
     changeCalc({ btnName, setCalculate });
   }
 
-  function showAnswer(soultion) {
-    //Applies calculations to answer const.
-    //soultion recived from <DoCalculations />
-    setAnswer(soultion);
-  }
-
   return (
     <div className={calculatorStyles.padding}>
       <Container>
@@ -51,7 +43,7 @@ function Calculator() {
           <CalcBtn
             changeCalculate={handleChangeCalc} //On button click activates handleChangeCalc.
             className={calculate.findingPrice ? activeBtn : customBtn} //Used to change styles based on if the button is active or not.
-            btnName="Price"
+            name="Price"
           ></CalcBtn>
 
           <CalcBtn
@@ -61,23 +53,19 @@ function Calculator() {
                 ? `${activeBtn} ${capBtn}`
                 : `${customBtn} ${capBtn}`
             }
-            btnName="Marketcap"
+            name="Marketcap"
           ></CalcBtn>
 
           <CalcBtn
             changeCalculate={handleChangeCalc}
             className={calculate.findingSupply ? activeBtn : customBtn}
-            btnName="Supply"
+            name="Supply"
           ></CalcBtn>
         </Row>
         {/* Passes over what the user wants to find. Changes the input names.
         Dose some math based on inputs. Returns the anwser. */}
         <Row>
-          <DoCalculations toCalculate={calculate} showAnswer={showAnswer} />
-        </Row>
-        <Row>
-          {/*passes button name over and the anwser. Renders both.*/}
-          <OutputAnswer toFind={calculate.toFind} answer={answer} />
+          <DoCalculations toCalculate={calculate} />
         </Row>
       </Container>
     </div>

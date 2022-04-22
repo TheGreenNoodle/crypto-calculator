@@ -9,7 +9,7 @@ function CalcBtn(props) {
         name={props.name}
         size="lg"
       >
-        {props.btnName}
+        {props.name}
       </Button>
     </Col>
   );

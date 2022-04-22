@@ -1,6 +1,7 @@
 import { InputGroup, FormControl } from "react-bootstrap";
 
 function Inputs(props) {
+  let nameLower = props.name.toLowerCase();
   return (
     <InputGroup className="mb-3">
       <InputGroup.Text id="inputGroup-sizing-default">
@@ -9,7 +10,7 @@ function Inputs(props) {
       <FormControl
         aria-label="Default"
         aria-describedby="inputGroup-sizing-default"
-        placeholder={"Enter " + props.name.toLowerCase() + " here"}
+        placeholder={"Enter " + nameLower + " here"}
         type="Number"
         onChange={props.handleInputs} //Runs handleInput to update valuesArray
         name={props.name}
