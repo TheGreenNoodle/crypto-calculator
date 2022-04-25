@@ -1,5 +1,15 @@
 .header {
-  color: white;
+  color: #f7ff93;
+  background-color: #247881;
+  /* background: linear-gradient(231deg, #069a8e, #30aadd) fixed; */
+  background: linear-gradient(231deg, #a85cf9, #4b7be5) fixed;
+  box-shadow: 8px 10px;
+
+  border-radius: 20px;
+  width: 70%;
   padding: 40px;
-  background-color: coral;
+  margin: auto;
+
+  position: relative;
+  top: 40px;
 }

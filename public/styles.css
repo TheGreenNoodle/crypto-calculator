@@ -1,4 +1,5 @@
 .bodyStyles {
-  background-color: #46004a;
-  background-image: url("https://www.transparenttextures.com/patterns/bright-squares.png");
+  background-color: #30aadd;
+  background-image: url("./Images/diagmonds-light.png");
+  background: linear-gradient(231deg, #30aadd, #00ffc6) fixed;
 }

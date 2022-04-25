@@ -2,25 +2,37 @@
   margin: 120px 0;
   padding: 20px;
 
-  background-color: green;
+  color: #f7ff93;
+  background: linear-gradient(231deg, #a85cf9, #4b7be5) fixed;
+
+  border-style: solid;
+  border-width: thick;
+
   display: inline-block;
   border-radius: 10%;
 }
 
-/* Buttons */
+/* Custom Buttons */
 .customBtn {
-  background-color: orange;
-  color: pink;
-  border-color: black;
+  /* background-color: #00ffc6; */
+  background: linear-gradient(231deg, #30aadd, #00ffc6) fixed;
+  color: white;
+  border: none;
+
   display: inline-block;
   margin: 20px;
   height: 80px;
   width: 100px;
 }
+
+/* Active Button */
 .activeBtn {
-  background-color: lightBlue;
+  /* background-color: #30aadd; */
+  background: linear-gradient(231deg, #a85cf9, #5534a5) fixed;
   color: white;
+  outline-color: black;
 }
+
 .customBtnMarket {
   width: 130px;
 }
