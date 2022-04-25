@@ -1,4 +1,5 @@
-.padding {
+/* Overall sytle */
+.calcBoxStyles {
   margin: 120px 0;
   padding: 20px;
 
@@ -7,22 +8,24 @@
 
   border-style: solid;
   border-width: thick;
+  border-radius: 10%;
 
   display: inline-block;
-  border-radius: 10%;
 }
 
 /* Custom Buttons */
 .customBtn {
-  /* background-color: #00ffc6; */
-  background: linear-gradient(231deg, #30aadd, #00ffc6) fixed;
-  color: white;
-  border: none;
-
-  display: inline-block;
   margin: 20px;
   height: 80px;
   width: 100px;
+
+  color: white;
+  /* background-color: #00ffc6; */
+  background: linear-gradient(231deg, #30aadd, #00ffc6) fixed;
+
+  border: none;
+
+  display: inline-block;
 }
 
 /* Active Button */
@@ -30,9 +33,17 @@
   /* background-color: #30aadd; */
   background: linear-gradient(231deg, #a85cf9, #5534a5) fixed;
   color: white;
-  outline-color: black;
 }
 
 .customBtnMarket {
   width: 130px;
+}
+
+/* Anwser */
+.anwserStyles {
+  margin: 20px 0;
+}
+
+.inputsDiv {
+  color: blue;
 }

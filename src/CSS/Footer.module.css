@@ -1,11 +1,35 @@
-.footer {
-  position: absolute;
-  bottom: 0;
-
-  height: 60px;
-  width: 100%;
-  background-color: coral;
+a {
+  color: #f7ff93;
 }
-.footerText {
-  color: white;
+
+a:hover {
+  color: #30aadd;
+}
+
+p {
+  display: inline-block;
+  margin: 0 50px;
+}
+
+.icon {
+  margin: auto;
+  display: block;
+}
+
+.footer {
+  position: relative;
+  bottom: 40px;
+
+  margin: auto;
+  width: 70%;
+  padding: 40px;
+
+  color: #f7ff93;
+  background-color: #247881;
+  /* background: linear-gradient(231deg, #069a8e, #30aadd) fixed; */
+  background: linear-gradient(231deg, #a85cf9, #4b7be5) fixed;
+
+  box-shadow: 8px 10px;
+
+  border-radius: 20px;
 }

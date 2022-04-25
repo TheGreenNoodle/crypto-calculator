@@ -4,7 +4,6 @@ import CalcBtn from "./CalculatorButtons";
 import DoCalculations from "./DoCalculations";
 import { changeCalc } from "./CalculatorFunctions";
 
-//putCustom buttons in own file
 import calculatorStyles from "../../CSS/Calculator.module.css";
 
 const customBtn = calculatorStyles.customBtn;
@@ -34,11 +33,12 @@ function Calculator() {
   }
 
   return (
-    <div className={calculatorStyles.padding}>
+    <div className={calculatorStyles.calcBoxStyles}>
       <Container>
         <Row>
-          <h3>Calculate</h3>
+          <h3 className={calculatorStyles.anwserStyles}>Calculate</h3>
         </Row>
+
         <Row>
           <CalcBtn
             changeCalculate={handleChangeCalc} //On button click activates handleChangeCalc.
@@ -62,6 +62,7 @@ function Calculator() {
             name="Supply"
           ></CalcBtn>
         </Row>
+
         {/* Passes over what the user wants to find. Changes the input names.
         Dose some math based on inputs. Returns the anwser. */}
         <Row>

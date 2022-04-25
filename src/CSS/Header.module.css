@@ -1,14 +1,16 @@
 .header {
+  margin: auto;
+  width: 70%;
+  padding: 40px;
+
   color: #f7ff93;
   background-color: #247881;
   /* background: linear-gradient(231deg, #069a8e, #30aadd) fixed; */
   background: linear-gradient(231deg, #a85cf9, #4b7be5) fixed;
+
   box-shadow: 8px 10px;
 
   border-radius: 20px;
-  width: 70%;
-  padding: 40px;
-  margin: auto;
 
   position: relative;
   top: 40px;

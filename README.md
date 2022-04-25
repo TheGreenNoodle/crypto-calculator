@@ -17,4 +17,8 @@ Can find the market cap, price, or supply of a crypto coin based on two other in
 5. Make site more responsive.
 6. Make react app deployable on github-pages.
 7. Review for spelling errors.
-8. Celebrate.
+8. Add styles to inputs.
+9. Add commas to input.
+10. Reset Anwser to nothing when switching button.
+11. Clean up code.
+12. Celebrate.

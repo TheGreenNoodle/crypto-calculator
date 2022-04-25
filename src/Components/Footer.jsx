@@ -1,9 +1,34 @@
+import { Container, Row } from "react-bootstrap";
+
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import LanguageIcon from "@mui/icons-material/Language";
+import Link from "./Link";
+
 import footerStyles from "../CSS/Footer.module.css";
 
 function Footer() {
   return (
     <div className={footerStyles.footer}>
-      <p className={footerStyles.footerText}>siteinfo</p>
+      <Container>
+        <Row>
+          <Link
+            name="GitHub"
+            src="https://github.com/TheGreenNoodle"
+            icon={<GitHubIcon className={footerStyles.icon} />}
+          />
+          <Link
+            name="LinkedIn"
+            src="https://www.linkedin.com/in/anton-fleming-8969671a2/"
+            icon={<LinkedInIcon className={footerStyles.icon} />}
+          />
+          <Link
+            name="Website"
+            src="https://thegreennoodle.github.io/my-personal-site/"
+            icon={<LanguageIcon className={footerStyles.icon} />}
+          />
+        </Row>
+      </Container>
     </div>
   );
 }
