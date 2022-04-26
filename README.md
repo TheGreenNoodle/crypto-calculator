@@ -10,15 +10,14 @@ Can find the market cap, price, or supply of a crypto coin based on two other in
 
 ## To Add
 
-1. Need to fix button outline so it is a better looking color.
-2. :hover class dose not work for some reason.
-3. Make buttons have a better clicking animation.
-4. Add new fonts.
-5. Make site more responsive.
-6. Make react app deployable on github-pages.
-7. Review for spelling errors.
-8. Add styles to inputs.
-9. Add commas to input.
-10. Reset Anwser to nothing when switching button.
-11. Clean up code.
-12. Celebrate.
+1. Add new fonts.
+2. Make font that is being typed have same color as input.
+3. remove or edit arrows in input.
+4. Make site more responsive.
+5. Make react app deployable on github-pages.
+6. Review for spelling errors.
+7. Add commas to input.
+8. Reset Anwser to nothing when switching button.
+9. Add a disclaimer and descption on website
+10. Clean up code.
+11. Celebrate.

@@ -33,10 +33,10 @@ function Calculator() {
   }
 
   return (
-    <div className={calculatorStyles.calcBoxStyles}>
+    <div className={calculatorStyles.calcBox}>
       <Container>
         <Row>
-          <h3 className={calculatorStyles.anwserStyles}>Calculate</h3>
+          <h2 className={calculatorStyles.header}>Calculate</h2>
         </Row>
 
         <Row>

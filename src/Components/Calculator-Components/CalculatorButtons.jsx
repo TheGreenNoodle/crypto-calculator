@@ -4,6 +4,7 @@ function CalcBtn(props) {
   return (
     <Col>
       <Button
+        variant="default"
         onClick={props.changeCalculate}
         className={props.className}
         name={props.name}

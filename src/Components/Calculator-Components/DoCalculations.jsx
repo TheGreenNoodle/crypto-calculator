@@ -51,11 +51,12 @@ function DoCalc(props) {
       />
 
       <Button
+        variant="default"
         onClick={() => {
           handleSubmit(); //Tells programs to run calculations
           setValuesArray(["", ""]); //Resets array
         }}
-        className={`${calculatorStyles.customBtn} ${calculatorStyles.customBtnMarket}`}
+        className={calculatorStyles.submitBtn}
         size="lg"
       >
         Submit

@@ -1,5 +1,5 @@
 /* Overall sytle */
-.calcBoxStyles {
+.calcBox {
   margin: 120px 0;
   padding: 20px;
 
@@ -12,9 +12,13 @@
 
   display: inline-block;
 }
-
+/* Header Calc Box*/
+.header {
+  margin: 5px auto 15px;
+}
 /* Custom Buttons */
-.customBtn {
+.customBtn,
+.submitBtn {
   margin: 20px;
   height: 80px;
   width: 100px;
@@ -27,33 +31,61 @@
 
   display: inline-block;
 }
-.customBtn:hover {
-  border-color: #f7ff93;
-  border-width: medium;
-  border-style: solid;
-}
 
 .customBtn:focus {
-  box-shadow: none;
-  outline: none;
+  box-shadow: 10px 10px black;
 }
 
-.customBtnMarket {
+.customBtnMarket,
+.submitBtn {
   width: 130px;
+}
+
+.submitBtn:focus {
+  box-shadow: 0 0 0 2px #f7ff93;
+  background: linear-gradient(231deg, #a85cf9, #5534a5) fixed;
 }
 
 /* Active Button */
 .activeBtn {
   /* background-color: #30aadd; */
   background: linear-gradient(231deg, #a85cf9, #5534a5) fixed;
-  color: white;
+  box-shadow: 10px 10px black;
 }
 
+/* Inputs */
+.inputsDiv {
+  margin: 16px auto 0;
+  width: 458px;
+}
+
+.inputGroupTxt,
+.inputForm {
+  border: none;
+  color: white;
+  box-shadow: 5px 5px black;
+}
+.inputForm {
+  background: linear-gradient(90deg, #5534a5, #a85cf9) fixed;
+}
+
+.inputForm::placeholder {
+  color: gray;
+  opacity: 1;
+}
+
+.inputForm:focus {
+  box-shadow: 5px 5px black;
+  border-color: white;
+  outline-style: solid;
+  outline-width: thin;
+  outline-color: white;
+}
+
+.inputGroupTxt {
+  background: #5534a5;
+}
 /* Anwser */
 .anwserStyles {
-  margin: 20px 0;
-}
-
-.inputsDiv {
-  color: blue;
+  margin: 15px auto 15px;
 }
