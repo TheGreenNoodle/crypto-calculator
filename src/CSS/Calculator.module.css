@@ -27,16 +27,26 @@
 
   display: inline-block;
 }
+.customBtn:hover {
+  border-color: #f7ff93;
+  border-width: medium;
+  border-style: solid;
+}
+
+.customBtn:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.customBtnMarket {
+  width: 130px;
+}
 
 /* Active Button */
 .activeBtn {
   /* background-color: #30aadd; */
   background: linear-gradient(231deg, #a85cf9, #5534a5) fixed;
   color: white;
-}
-
-.customBtnMarket {
-  width: 130px;
 }
 
 /* Anwser */
