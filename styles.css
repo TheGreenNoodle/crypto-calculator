@@ -1,0 +1,5 @@
+.bodyStyles {
+  background-color: #30aadd;
+  background-image: url("./Images/diagmonds-light.png");
+  background: linear-gradient(231deg, #30aadd, #00ffc6) fixed;
+}
