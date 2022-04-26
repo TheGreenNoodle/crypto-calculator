@@ -36,7 +36,7 @@ function Calculator() {
     <div className={calculatorStyles.calcBox}>
       <Container>
         <Row>
-          <h2 className={calculatorStyles.header}>Calculate</h2>
+          <h2 className={calculatorStyles.calcBoxHeader}>Calculate</h2>
         </Row>
 
         <Row>

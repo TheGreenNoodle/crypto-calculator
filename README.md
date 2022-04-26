@@ -10,14 +10,12 @@ Can find the market cap, price, or supply of a crypto coin based on two other in
 
 ## To Add
 
-1. Add new fonts.
-2. Make font that is being typed have same color as input.
-3. remove or edit arrows in input.
-4. Make site more responsive.
-5. Make react app deployable on github-pages.
-6. Review for spelling errors.
-7. Add commas to input.
-8. Reset Anwser to nothing when switching button.
-9. Add a disclaimer and descption on website
-10. Clean up code.
-11. Celebrate.
+1. remove or edit arrows in input.
+2. Make site more responsive.
+3. Review for spelling errors.
+4. round answeer to two decimals.
+5. Add commas to input.
+6. Reset Anwser to nothing when switching button.
+7. Fix random white spot at bottom of the screen.
+8. Clean up code.
+9. Celebrate.

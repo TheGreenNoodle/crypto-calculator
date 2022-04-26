@@ -17,6 +17,8 @@ p {
 }
 
 .footer {
+  font-family: "Fredoka One", cursive;
+  font-weight: lighter;
   position: relative;
   bottom: 40px;
 
