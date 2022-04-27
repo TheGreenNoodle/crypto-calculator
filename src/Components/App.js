@@ -11,20 +11,18 @@ function App() {
   return (
     <div className={appStyles.App}>
       <Container>
-        <Row>
-          <Col>
+        <Row className="justify-content-md-center">
+          <Col xxs={2} xs sm={5} md={10} xl xxl={11}>
             <Header />
           </Col>
         </Row>
-
-        <Row>
-          <Col>
+        <Row className="justify-content-md-center">
+          <Col xxs={2} xs sm={4} md={7} xl xxl={12}>
             <Calculator />
           </Col>
         </Row>
-
-        <Row>
-          <Col>
+        <Row className="justify-content-md-center">
+          <Col xxs={2} xs sm={5} md={10} xl xxl={11}>
             <Footer />
           </Col>
         </Row>

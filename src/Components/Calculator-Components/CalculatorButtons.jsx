@@ -1,18 +1,16 @@
-import { Button, Col } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 function CalcBtn(props) {
   return (
-    <Col>
-      <Button
-        variant="default"
-        onClick={props.changeCalculate}
-        className={props.className}
-        name={props.name}
-        size="lg"
-      >
-        {props.name}
-      </Button>
-    </Col>
+    <Button
+      variant="default"
+      onClick={props.changeCalculate}
+      className={props.className}
+      name={props.name}
+      size="lg"
+    >
+      {props.name}
+    </Button>
   );
 }
 

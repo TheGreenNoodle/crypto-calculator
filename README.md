@@ -11,5 +11,7 @@ Can find the market cap, price, or supply of a crypto coin based on two other in
 ## To Add
 
 1. Make site more responsive.
-2. Clean up code.
-3. Celebrate.
+2. Remove mutiple versions of react bug.
+3. Make buttons even.
+4. Clean up code.
+5. Celebrate.
