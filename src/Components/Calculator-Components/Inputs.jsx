@@ -6,11 +6,11 @@ function Inputs(props) {
   return (
     <div className={calculatorStyles.inputsDiv}>
       <InputGroup className="mb-3">
-        <InputGroup.Text className={calculatorStyles.inputGroupTxt}>
+        <InputGroup.Text className={calculatorStyles.inputTag}>
           {props.name} {/*Renders name of one of the two inputs*/}
         </InputGroup.Text>
         <FormControl
-          className={calculatorStyles.inputForm}
+          className={calculatorStyles.textBox}
           placeholder={"Enter " + nameLower + " here"}
           type="number"
           onChange={props.handleInputs} //Runs handleInput to update valuesArray

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Container, Row } from "react-bootstrap";
 import CalcBtn from "./CalculatorButtons";
 import DoCalculations from "./DoCalculations";
-import { changeCalc } from "./CalculatorFunctions";
+import changeCalc from "./Functions/changeCalc";
 
 import calculatorStyles from "../../CSS/Calculator.module.css";
 
@@ -39,7 +39,7 @@ function Calculator() {
           <h2 className={calculatorStyles.calcBoxHeader}>Calculate</h2>
         </Row>
 
-        <Row>
+        <Row xs={1} md={3} lg={3}>
           <CalcBtn
             changeCalculate={handleChangeCalc} //On button click activates handleChangeCalc.
             className={calculate.findingPrice ? activeBtn : customBtn} //Used to change styles based on if the button is active or not.

@@ -14,11 +14,17 @@ function App() {
             <Header />
           </Col>
         </Row>
+
         <Row>
-          <Calculator />
+          <Col>
+            <Calculator />
+          </Col>
         </Row>
+
         <Row>
-          <Footer />
+          <Col>
+            <Footer />
+          </Col>
         </Row>
       </Container>
     </div>

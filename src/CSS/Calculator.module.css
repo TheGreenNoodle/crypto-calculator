@@ -13,10 +13,12 @@
 
   display: inline-block;
 }
+
 /* Header Calc Box*/
 .calcBoxHeader {
   margin: 5px auto 15px;
 }
+
 /* Custom Buttons */
 .customBtn,
 .submitBtn {
@@ -57,26 +59,27 @@
 /* Inputs */
 .inputsDiv {
   margin: 16px auto 0;
-  width: 458px;
+  width: auto;
 }
 
-.inputGroupTxt,
-.inputForm {
+.inputTag,
+.textBox {
   border: none;
   color: white;
 
   box-shadow: 5px 5px black;
 }
-.inputForm {
+
+.textBox {
   background: linear-gradient(90deg, #5534a5, #a85cf9) fixed;
 }
 
-.inputForm::placeholder {
+.textBox::placeholder {
   color: gray;
   opacity: 1;
 }
 
-.inputForm:focus {
+.textBox:focus {
   box-shadow: 5px 5px black;
   color: white;
   border-color: white;
@@ -85,9 +88,10 @@
   outline-color: white;
 }
 
-.inputGroupTxt {
+.inputTag {
   background: #5534a5;
 }
+
 /* Anwser */
 .anwserStyles {
   margin: 15px auto 15px;

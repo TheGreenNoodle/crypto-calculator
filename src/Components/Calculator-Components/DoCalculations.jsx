@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { Button, Row } from "react-bootstrap";
+import { Button, Row, Col } from "react-bootstrap";
 import Inputs from "./Inputs";
 import OutputAnswer from "./OutputAnswer";
-import { addInputsToValueArray, findSoultion } from "./CalculatorFunctions";
+import addInputsToValueArray from "./Functions/addInputsToValueArray";
+import findSoultion from "./Functions/findSoultion";
+
 import calculatorStyles from "../../CSS/Calculator.module.css";
 
 function DoCalc(props) {
@@ -39,28 +41,35 @@ function DoCalc(props) {
 
   return (
     <div>
-      <Inputs
-        name={firstInputName}
-        handleInputs={handleInputs}
-        value={valuesArray[0]}
-      />
-      <Inputs
-        name={secondInputName}
-        handleInputs={handleInputs}
-        value={valuesArray[1]}
-      />
+      <Col>
+        <Inputs
+          name={firstInputName}
+          handleInputs={handleInputs}
+          value={valuesArray[0]}
+        />
+      </Col>
 
-      <Button
-        variant="default"
-        onClick={() => {
-          handleSubmit(); //Tells programs to run calculations
-          setValuesArray(["", ""]); //Resets array
-        }}
-        className={calculatorStyles.submitBtn}
-        size="lg"
-      >
-        Submit
-      </Button>
+      <Col>
+        <Inputs
+          name={secondInputName}
+          handleInputs={handleInputs}
+          value={valuesArray[1]}
+        />
+      </Col>
+
+      <Col>
+        <Button
+          variant="default"
+          onClick={() => {
+            handleSubmit(); //Tells programs to run calculations
+            setValuesArray(["", ""]); //Resets array
+          }}
+          className={calculatorStyles.submitBtn}
+          size="lg"
+        >
+          Submit
+        </Button>
+      </Col>
       <Row>
         {/*passes button name over and the anwser. Renders both.*/}
         <OutputAnswer toFind={toFind} answer={answer} />
