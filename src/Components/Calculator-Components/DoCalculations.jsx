@@ -15,7 +15,7 @@ function DoCalc(props) {
   // Holds two values so that will be used to find final answer.
   const [valuesArray, setValuesArray] = useState(["", ""]);
   // holds final answer.
-  const [answer, setAnswer] = useState("Anwser Here");
+  const [answer, setAnswer] = useState("Answer Here");
 
   function handleInputs(inputs) {
     // When inputs onChange is activated it passes over the values
@@ -29,6 +29,7 @@ function DoCalc(props) {
       firstInputName,
       secondInputName,
     });
+    setAnswer("Answer Here");
   }
 
   function handleSubmit() {

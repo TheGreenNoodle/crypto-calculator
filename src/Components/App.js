@@ -6,6 +6,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import appStyles from "../CSS/App.module.css";
 
 function App() {
+  const body = document.body;
+  body.classList.add(appStyles.bodyBackground);
   return (
     <div className={appStyles.App}>
       <Container>

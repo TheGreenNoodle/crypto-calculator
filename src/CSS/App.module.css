@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+}
+.bodyBackground {
   background-color: #30aadd;
   background: linear-gradient(231deg, #30aadd, #00ffc6) fixed;
 }

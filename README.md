@@ -10,11 +10,6 @@ Can find the market cap, price, or supply of a crypto coin based on two other in
 
 ## To Add
 
-1. remove or edit arrows in input.
-2. Make site more responsive.
-3. Review for spelling errors.
-4. At desc explain the function of the site.
-5. Reset Anwser to nothing when switching button.
-6. Fix random white spot at bottom of the screen.
-7. Clean up code.
-8. Celebrate.
+1. Make site more responsive.
+2. Clean up code.
+3. Celebrate.
