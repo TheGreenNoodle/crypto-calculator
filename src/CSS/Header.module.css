@@ -1,7 +1,7 @@
 .header {
   font-family: "Fredoka One", cursive;
   margin: auto;
-  /* width: 70%; */
+  width: 65%;
   padding: 40px;
 
   color: #f7ff93;
@@ -15,4 +15,15 @@
 
   position: relative;
   top: 40px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .header {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 1059px) {
+  .header {
+    width: 80%;
+  }
 }

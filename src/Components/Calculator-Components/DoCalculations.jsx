@@ -42,39 +42,33 @@ function DoCalc(props) {
 
   return (
     <div>
-      <Col>
+      <div className={calculatorStyles.inputsDiv}>
         <Inputs
           name={firstInputName}
           handleInputs={handleInputs}
           value={valuesArray[0]}
         />
-      </Col>
 
-      <Col>
         <Inputs
           name={secondInputName}
           handleInputs={handleInputs}
           value={valuesArray[1]}
         />
-      </Col>
+      </div>
+      <Button
+        variant="default"
+        onClick={() => {
+          handleSubmit(); //Tells programs to run calculations
+          setValuesArray(["", ""]); //Resets array
+        }}
+        className={calculatorStyles.submitBtn}
+        size="lg"
+      >
+        Submit
+      </Button>
 
-      <Col>
-        <Button
-          variant="default"
-          onClick={() => {
-            handleSubmit(); //Tells programs to run calculations
-            setValuesArray(["", ""]); //Resets array
-          }}
-          className={calculatorStyles.submitBtn}
-          size="lg"
-        >
-          Submit
-        </Button>
-      </Col>
-      <Row>
-        {/*passes button name over and the anwser. Renders both.*/}
-        <OutputAnswer toFind={toFind} answer={answer} />
-      </Row>
+      {/*passes button name over and the anwser. Renders both.*/}
+      <OutputAnswer toFind={toFind} answer={answer} />
     </div>
   );
 }

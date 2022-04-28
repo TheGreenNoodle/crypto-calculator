@@ -12,8 +12,8 @@ p {
 }
 
 .icon {
-  margin: auto;
-  display: block;
+  display: inline-block;
+  margin: 20px;
 }
 
 .footer {
@@ -23,7 +23,7 @@ p {
   bottom: 40px;
 
   margin: auto;
-  /* width: 70%; */
+  width: 65%;
   padding: 40px;
 
   color: #f7ff93;
@@ -34,4 +34,55 @@ p {
   box-shadow: 8px 10px;
 
   border-radius: 20px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .footer {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 1059px) {
+  .footer {
+    width: 80%;
+  }
+}
+
+/* Extra Extra Large */
+@media only screen and (max-width: 3840px) and (min-width: 1921px) {
+}
+/* Extra Large */
+@media only screen and (max-width: 1420px) and (min-width: 1257px) {
+  .icon {
+    margin: 10px;
+    font-size: 5px;
+  }
+}
+/* Large */
+@media only screen and (max-width: 1257px) and (min-width: 913px) {
+  .icon {
+    margin: 3px;
+    font-size: 5px;
+  }
+}
+/* Medium */
+@media only screen and (max-width: 912px) and (min-width: 740px) {
+  .icon {
+    margin: 3px;
+    font-size: 10px;
+  }
+}
+
+/* Small*/
+@media only screen and (max-width: 739px) {
+  .icon {
+    margin: 5px;
+    font-size: 5px;
+  }
+}
+/* Extra Small  */
+@media only screen and (max-width: 480px) {
+  .icon {
+    margin: 5px;
+    font-size: 5px;
+  }
 }

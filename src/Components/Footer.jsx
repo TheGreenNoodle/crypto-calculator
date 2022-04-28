@@ -10,25 +10,21 @@ import footerStyles from "../CSS/Footer.module.css";
 function Footer() {
   return (
     <div className={footerStyles.footer}>
-      <Container>
-        <Row>
-          <Link
-            name="GitHub"
-            src="https://github.com/TheGreenNoodle"
-            icon={<GitHubIcon className={footerStyles.icon} />}
-          />
-          <Link
-            name="LinkedIn"
-            src="https://www.linkedin.com/in/anton-fleming-8969671a2/"
-            icon={<LinkedInIcon className={footerStyles.icon} />}
-          />
-          <Link
-            name="Website"
-            src="https://thegreennoodle.github.io/my-personal-site/"
-            icon={<LanguageIcon className={footerStyles.icon} />}
-          />
-        </Row>
-      </Container>
+      <Link
+        name="GitHub"
+        src="https://github.com/TheGreenNoodle"
+        icon={<GitHubIcon className={footerStyles.icon} />}
+      />
+      <Link
+        name="LinkedIn"
+        src="https://www.linkedin.com/in/anton-fleming-8969671a2/"
+        icon={<LinkedInIcon className={footerStyles.icon} />}
+      />
+      <Link
+        name="Website"
+        src="https://thegreennoodle.github.io/my-personal-site/"
+        icon={<LanguageIcon className={footerStyles.icon} />}
+      />
     </div>
   );
 }
