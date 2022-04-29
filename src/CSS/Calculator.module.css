@@ -22,6 +22,7 @@
 /* Anwser */
 .anwserStyles {
   margin: 15px auto 15px;
+  overflow-wrap: break-word;
 }
 
 /* Responsiveness Width */

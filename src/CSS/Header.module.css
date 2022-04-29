@@ -16,7 +16,7 @@
   top: 40px;
 }
 /* Extra Extra Large */
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 2047px) {
   .header {
     width: 50%;
   }
