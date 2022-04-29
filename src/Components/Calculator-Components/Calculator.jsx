@@ -1,14 +1,14 @@
 import { useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import CalcBtn from "./CalculatorButtons";
+import CalcBtn from "./CalcButtons";
 import DoCalculations from "./DoCalculations";
 import changeCalc from "./Functions/changeCalc";
 
 import calculatorStyles from "../../CSS/Calculator.module.css";
+import calcBtn from "../../CSS/Calculator/CalcButtons.module.css";
 
-const customBtn = calculatorStyles.customBtn;
-const activeBtn = `${customBtn} ${calculatorStyles.activeBtn}`;
-const capBtn = calculatorStyles.customBtnMarket; //marketcap btn custom style
+const customBtn = calcBtn.customBtn;
+const activeBtn = `${customBtn} ${calcBtn.activeBtn}`;
+const capBtn = calcBtn.customBtnMarket; //marketcap btn custom style
 
 function Calculator() {
   const [calculate, setCalculate] = useState({

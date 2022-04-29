@@ -1,19 +1,16 @@
 a {
   color: #f7ff93;
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 70px;
 }
 
 a:hover {
   color: #30aadd;
 }
 
-p {
-  display: inline-block;
-  margin: 0 50px;
-}
-
 .icon {
   display: inline-block;
-  margin: 20px;
 }
 
 .footer {
@@ -28,7 +25,6 @@ p {
 
   color: #f7ff93;
   background-color: #247881;
-  /* background: linear-gradient(231deg, #069a8e, #30aadd) fixed; */
   background: linear-gradient(231deg, #a85cf9, #4b7be5) fixed;
 
   box-shadow: 8px 10px;
@@ -36,53 +32,57 @@ p {
   border-radius: 20px;
 }
 
-@media only screen and (min-width: 1200px) {
+/* Extra Extra Large */
+@media only screen and (min-width: 1440px) {
+  a {
+    margin: 20px 90px;
+  }
+  .footer {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1440px) and (min-width: 1200px) {
   .footer {
     width: 70%;
   }
 }
+
 @media only screen and (max-width: 1059px) {
   .footer {
     width: 80%;
   }
 }
 
-/* Extra Extra Large */
-@media only screen and (max-width: 3840px) and (min-width: 1921px) {
-}
 /* Extra Large */
-@media only screen and (max-width: 1420px) and (min-width: 1257px) {
-  .icon {
-    margin: 10px;
-    font-size: 5px;
+@media only screen and (max-width: 1440px) and (min-width: 1257px) {
+  a {
+    margin: 20px 60px;
   }
 }
 /* Large */
 @media only screen and (max-width: 1257px) and (min-width: 913px) {
-  .icon {
-    margin: 3px;
-    font-size: 5px;
+  a {
+    margin: 10px 40px;
   }
 }
 /* Medium */
-@media only screen and (max-width: 912px) and (min-width: 740px) {
-  .icon {
-    margin: 3px;
-    font-size: 10px;
+@media only screen and (max-width: 912px) and (min-width: 844px) {
+  a {
+    margin: 5px 50px;
   }
 }
 
 /* Small*/
-@media only screen and (max-width: 739px) {
-  .icon {
-    margin: 5px;
-    font-size: 5px;
+@media only screen and (max-width: 844px) and (min-width: 541px) {
+  a {
+    margin: 0 20px;
   }
 }
 /* Extra Small  */
-@media only screen and (max-width: 480px) {
-  .icon {
-    margin: 5px;
-    font-size: 5px;
+@media only screen and (max-width: 540px) {
+  a {
+    display: block;
+    margin: 5px 0;
   }
 }

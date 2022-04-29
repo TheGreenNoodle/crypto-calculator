@@ -19,92 +19,14 @@
   margin: 5px auto 15px;
 }
 
-/* Custom Buttons */
-.customBtn,
-.submitBtn {
-  margin: 20px;
-  height: 80px;
-  width: 100px;
-
-  color: white;
-  /* background-color: #00ffc6; */
-  background: linear-gradient(231deg, #30aadd, #00ffc6) fixed;
-
-  border: none;
-  border-radius: 10px;
-
-  display: inline-block;
-}
-
-.customBtn:focus {
-  box-shadow: 10px 10px black;
-}
-
-.customBtnMarket,
-.submitBtn {
-  width: 130px;
-}
-
-.submitBtn:focus {
-  box-shadow: 0 0 0 2px #f7ff93;
-  background: linear-gradient(231deg, #a85cf9, #5534a5) fixed;
-}
-
-/* Active Button */
-.activeBtn {
-  /* background-color: #30aadd; */
-  background: linear-gradient(231deg, #a85cf9, #5534a5) fixed;
-  box-shadow: 10px 10px black;
-}
-
-/* Inputs */
-.inputsDiv {
-  margin: 16px auto 0;
-  width: auto;
-}
-
-.inputTag,
-.textBox {
-  border: none;
-  color: white;
-
-  box-shadow: 5px 5px black;
-}
-
-.textBox {
-  background: linear-gradient(90deg, #5534a5, #a85cf9) fixed;
-}
-
-.textBox::placeholder {
-  color: gray;
-  opacity: 1;
-}
-
-.textBox:focus {
-  box-shadow: 5px 5px black;
-  color: white;
-  border-color: white;
-  outline-style: solid;
-  outline-width: thin;
-  outline-color: white;
-}
-
-.inputTag {
-  background: #5534a5;
-}
-
 /* Anwser */
 .anwserStyles {
   margin: 15px auto 15px;
 }
 
 /* Responsiveness Width */
-
-/* Extra Extra Large */
-@media only screen and (max-width: 3840px) and (min-width: 1921px) {
-}
 /* Extra Large */
-@media only screen and (max-width: 1920px) and (min-width: 1060px) {
+@media only screen and (min-width: 1060px) {
   /* Titles */
   h1 {
     font-size: 65px;
@@ -116,42 +38,12 @@
   a {
     font-size: 25px;
   }
-  /* Buttons */
-  .customBtn,
-  .submitBtn {
-    height: 140px;
-    width: 160px;
-    font-size: 25px;
-  }
-  .customBtnMarket,
-  .submitBtn {
-    width: 190px;
-  }
-
-  /* Inputs */
-  .inputTag,
-  .textBox {
-    font-size: 25px;
-  }
-  .inputsDiv {
-    width: 36.875rem;
-  }
 }
 /* Large */
 @media only screen and (max-width: 1059px) and (min-width: 963px) {
   .calcBox {
     width: 52%;
     border-radius: 10%;
-  }
-  .inputsDiv {
-    width: 25.625rem;
-  }
-}
-
-/* Medium */
-@media only screen and (max-width: 962px) and (min-width: 740px) {
-  .inputsDiv {
-    width: 25.625rem;
   }
 }
 
@@ -161,58 +53,11 @@
     width: 60%;
     border-radius: 20px;
   }
-
-  .customBtn,
-  .customBtnMarket,
-  .submitBtn {
-    display: block;
-    margin: 20px auto;
-    height: 60px;
-    width: 100%;
-    font-size: 20px;
-  }
-
-  .inputTag {
-    display: none;
-  }
-  .textBox {
-    font-size: 16px;
-    border-radius: 3px !important;
-  }
-  .inputsDiv {
-    margin: 50px 0;
-    width: auto;
-  }
 }
 /* Extra Small  */
 @media only screen and (max-width: 480px) {
   .calcBox {
     width: 80%;
     border-radius: 20px;
-  }
-}
-
-/* Responsiveness Height */
-/* Mostly for Surface Pro 7 */
-@media only screen and (min-height: 1368px) {
-  /* Buttons */
-  .customBtn,
-  .submitBtn {
-    height: 120px;
-    width: 140px;
-    font-size: 25px;
-  }
-  .customBtnMarket,
-  .submitBtn {
-    width: 170px;
-  }
-
-  /* Inputs */
-  .inputTag,
-  .textBox {
-    font-size: 25px;
-  }
-  .inputsDiv {
-    width: 33.125rem;
   }
 }

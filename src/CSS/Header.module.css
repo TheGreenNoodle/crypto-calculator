@@ -6,7 +6,6 @@
 
   color: #f7ff93;
   background-color: #247881;
-  /* background: linear-gradient(231deg, #069a8e, #30aadd) fixed; */
   background: linear-gradient(231deg, #a85cf9, #4b7be5) fixed;
 
   box-shadow: 8px 10px;
@@ -16,12 +15,19 @@
   position: relative;
   top: 40px;
 }
-
-@media only screen and (min-width: 1200px) {
+/* Extra Extra Large */
+@media only screen and (min-width: 1440px) {
+  .header {
+    width: 50%;
+  }
+}
+/* Large */
+@media only screen and (max-width: 1440px) and (min-width: 1200px) {
   .header {
     width: 70%;
   }
 }
+/* Medium */
 @media only screen and (max-width: 1059px) {
   .header {
     width: 80%;

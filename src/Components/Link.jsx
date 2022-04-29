@@ -1,9 +1,6 @@
-import { Col } from "react-bootstrap";
-import footerStyles from "../CSS/Footer.module.css";
-
 function Link(props) {
   return (
-    <div className={footerStyles.icon}>
+    <div style={{ display: "inline" }}>
       <a href={props.src}>
         <p>
           {props.icon} {props.name}

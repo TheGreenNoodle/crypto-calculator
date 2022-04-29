@@ -1,0 +1,90 @@
+/* Inputs */
+/* Shows input title name when on smaller screen. */
+.titles {
+  display: none;
+  margin: 20px;
+}
+.inputsDiv {
+  margin: 16px auto 0;
+  width: auto;
+}
+
+.inputTag {
+  background: #5534a5;
+}
+
+.inputTag,
+.textBox {
+  border: none;
+  color: white;
+
+  box-shadow: 5px 5px black;
+}
+
+.textBox {
+  background: linear-gradient(90deg, #5534a5, #a85cf9) fixed;
+}
+
+.textBox::placeholder {
+  color: gray;
+  opacity: 1;
+}
+
+.textBox:focus {
+  box-shadow: 5px 5px black;
+
+  color: white;
+  border-color: white;
+  outline-color: white;
+
+  outline-style: solid;
+  outline-width: thin;
+}
+/* Extra Large */
+@media only screen and (min-width: 1060px) {
+  /* Inputs */
+  .inputTag,
+  .textBox {
+    font-size: 25px;
+  }
+  .inputsDiv {
+    width: 36.875rem;
+  }
+}
+/* Large */
+@media only screen and (max-width: 1059px) and (min-width: 963px) {
+  .inputsDiv {
+    width: 25.625rem;
+  }
+}
+
+/* Medium */
+@media only screen and (max-width: 962px) and (min-width: 740px) {
+  .inputsDiv {
+    width: 25.625rem;
+  }
+}
+
+/* Small*/
+@media only screen and (max-width: 739px) {
+  .titles {
+    display: block;
+    margin: 0 0 10px;
+  }
+  .inputTag {
+    display: none;
+  }
+  .textBox {
+    font-size: 16px;
+    border-radius: 100px !important;
+  }
+  .inputsDiv {
+    margin: 50px 0;
+    border-style: solid;
+    border-width: thick;
+    padding: 10px;
+    border-radius: 20px;
+
+    width: auto;
+  }
+}

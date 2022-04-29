@@ -1,0 +1,73 @@
+/* Custom Buttons */
+.customBtn,
+.submitBtn {
+  margin: 20px;
+  height: 80px;
+  width: 100px;
+
+  color: white;
+  /* background-color: #00ffc6; */
+  background: linear-gradient(231deg, #30aadd, #00ffc6) fixed;
+
+  border: none;
+  border-radius: 10px;
+
+  display: inline-block;
+}
+
+.customBtn:focus {
+  box-shadow: 10px 10px black;
+}
+
+.customBtnMarket,
+.submitBtn {
+  width: 130px;
+}
+
+.submitBtn:focus {
+  box-shadow: 0 0 0 2px #f7ff93;
+  background: linear-gradient(231deg, #a85cf9, #5534a5) fixed;
+}
+
+/* Active Button */
+.activeBtn {
+  /* background-color: #30aadd; */
+  background: linear-gradient(231deg, #a85cf9, #5534a5) fixed;
+  box-shadow: 10px 10px black;
+}
+
+/* Responsiveness Width */
+
+/* Extra Large */
+@media only screen and (min-width: 1060px) {
+  .customBtn,
+  .submitBtn {
+    height: 140px;
+    width: 160px;
+    font-size: 25px;
+  }
+  .customBtnMarket,
+  .submitBtn {
+    width: 190px;
+  }
+}
+/* Small*/
+@media only screen and (max-width: 739px) {
+  .customBtn:focus,
+  .customBtnMarket:focus,
+  .activeBtn {
+    box-shadow: 5px 5px black;
+  }
+  .customBtn,
+  .customBtnMarket,
+  .submitBtn {
+    display: block;
+    margin: 20px auto;
+    height: 60px;
+    width: 100%;
+    font-size: 20px;
+  }
+  .submitBtn {
+    margin: 50px 0;
+  }
+}

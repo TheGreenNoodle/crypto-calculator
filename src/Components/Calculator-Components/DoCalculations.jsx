@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { Button, Row, Col } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import Inputs from "./Inputs";
 import OutputAnswer from "./OutputAnswer";
 import addInputsToValueArray from "./Functions/addInputsToValueArray";
 import findSoultion from "./Functions/findSoultion";
 
-import calculatorStyles from "../../CSS/Calculator.module.css";
+import calcBtn from "../../CSS/Calculator/CalcButtons.module.css";
+import inputStyles from "../../CSS/Calculator/Inputs.module.css";
 
 function DoCalc(props) {
   const toFind = props.toCalculate.toFind;
@@ -42,7 +43,7 @@ function DoCalc(props) {
 
   return (
     <div>
-      <div className={calculatorStyles.inputsDiv}>
+      <div className={inputStyles.inputsDiv}>
         <Inputs
           name={firstInputName}
           handleInputs={handleInputs}
@@ -61,7 +62,7 @@ function DoCalc(props) {
           handleSubmit(); //Tells programs to run calculations
           setValuesArray(["", ""]); //Resets array
         }}
-        className={calculatorStyles.submitBtn}
+        className={calcBtn.submitBtn}
         size="lg"
       >
         Submit
