@@ -1,25 +1,25 @@
 /* Custom Buttons */
 .customBtn,
 .submitBtn {
-  margin: 20px;
-  height: 80px;
-  width: 100px;
-
   color: white;
-  /* background-color: #00ffc6; */
   background: linear-gradient(231deg, #30aadd, #00ffc6) fixed;
 
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
 
   display: inline-block;
+
+  font-size: 50px;
+
+  margin: 20px;
+  height: 400px;
+  width: 400px;
 }
 
 .customBtn:focus {
   box-shadow: 10px 10px black;
 }
 
-.customBtnMarket,
 .submitBtn {
   width: 130px;
 }
@@ -36,38 +36,25 @@
   box-shadow: 10px 10px black;
 }
 
-/* Responsiveness Width */
-
-/* Extra Large */
-@media only screen and (min-width: 1060px) {
-  .customBtn,
-  .submitBtn {
-    height: 140px;
-    width: 160px;
-    font-size: 25px;
-  }
-  .customBtnMarket,
-  .submitBtn {
-    width: 190px;
+@media (max-width: 1200px){
+  .customBtn{
+    font-size: 30px;
+    height: 200px;
+    width: 200px;
   }
 }
-/* Small*/
-@media only screen and (max-width: 739px) {
-  .customBtn:focus,
-  .customBtnMarket:focus,
-  .activeBtn {
-    box-shadow: 5px 5px black;
+
+@media (max-width: 860px){
+  .customBtn{
+    height: 150px;
+    width: 150px;
   }
-  .customBtn,
-  .customBtnMarket,
-  .submitBtn {
-    display: block;
-    margin: 20px auto;
-    height: 60px;
-    width: 100%;
-    font-size: 20px;
-  }
-  .submitBtn {
-    margin: 50px 0;
+}
+
+@media (max-width: 690px){
+  .customBtn{
+    height: 150px;
+    width: 90%;
+    margin: 20px 0;
   }
 }

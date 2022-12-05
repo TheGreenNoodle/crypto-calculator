@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 import Inputs from "./Inputs";
-import OutputAnswer from "./OutputAnswer";
 import addInputsToValueArray from "./Functions/addInputsToValueArray";
 import findSoultion from "./Functions/findSoultion";
 
@@ -12,11 +11,11 @@ function DoCalc(props) {
   const toFind = props.toCalculate.toFind;
   const firstInputName = props.toCalculate.firstInput;
   const secondInputName = props.toCalculate.secondInput;
+  const setAnswer = props.setAnswer;
 
   // Holds two values so that will be used to find final answer.
   const [valuesArray, setValuesArray] = useState(["", ""]);
   // holds final answer.
-  const [answer, setAnswer] = useState("Answer Here");
 
   function handleInputs(inputs) {
     // When inputs onChange is activated it passes over the values
@@ -63,13 +62,9 @@ function DoCalc(props) {
           setValuesArray(["", ""]); //Resets array
         }}
         className={calcBtn.submitBtn}
-        size="lg"
-      >
+        size="lg">
         Submit
       </Button>
-
-      {/*passes button name over and the anwser. Renders both.*/}
-      <OutputAnswer toFind={toFind} answer={answer} />
     </div>
   );
 }

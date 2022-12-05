@@ -9,9 +9,7 @@ function App() {
   return (
     <div className={appStyles.App}>
       <Header />
-
       <Calculator />
-
       <Footer />
     </div>
   );

@@ -20,7 +20,6 @@ a:hover {
   bottom: 40px;
 
   margin: auto;
-  width: 65%;
   padding: 40px;
 
   color: #f7ff93;
@@ -37,21 +36,7 @@ a:hover {
   a {
     margin: 20px 90px;
   }
-  .footer {
-    width: 50%;
-  }
-}
 
-@media only screen and (max-width: 1440px) and (min-width: 1200px) {
-  .footer {
-    width: 70%;
-  }
-}
-
-@media only screen and (max-width: 1059px) {
-  .footer {
-    width: 80%;
-  }
 }
 
 /* Extra Large */

@@ -7,13 +7,13 @@ function changeCalc({ btnName, setCalculate }) {
     setCalculate({
       toFind: btnName,
       firstInput: "Supply",
-      secondInput: "Marketcap",
+      secondInput: "Market Cap",
 
       findingPrice: true,
       findingSupply: false,
       findingMarketcap: false,
     });
-  } else if (btnName === "Marketcap") {
+  } else if (btnName === "Market Cap") {
     setCalculate({
       toFind: btnName,
       firstInput: "Price",
@@ -27,7 +27,7 @@ function changeCalc({ btnName, setCalculate }) {
     setCalculate({
       toFind: btnName,
       firstInput: "Price",
-      secondInput: "Marketcap",
+      secondInput: "Market Cap",
 
       findingPrice: false,
       findingSupply: true,

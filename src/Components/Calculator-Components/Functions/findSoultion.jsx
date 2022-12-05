@@ -20,7 +20,7 @@ function findSoultion({ valuesArray, setAnswer, toFind }) {
     }
 
     setAnswer(finalValue);
-  } else if (toFind === "Marketcap") {
+  } else if (toFind === "Market Cap") {
     finalValue = secondValue * firstValue;
 
     if (finalValue <= 2000000000000) {
