@@ -4,8 +4,12 @@ import Footer from "./Footer";
 import appStyles from "../CSS/App.module.css";
 
 function App() {
+  const root = document.getElementById("root");
   const body = document.body;
-  body.classList.add(appStyles.bodyBackground);
+
+  root.classList.add(appStyles.root);
+  body.classList.add(appStyles.body);
+
   return (
     <div className={appStyles.App}>
       <Header />

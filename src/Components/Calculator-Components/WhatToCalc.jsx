@@ -22,7 +22,7 @@ function WhatToCalc(props) {
 
   return (
     <div className={calculatorStyles.calcBox}>
-      <h2>Calculate for…</h2>
+      <h2 className={calculatorStyles.header}>Calculate for…</h2>
 
       <CalcBtn
         changeCalc={handleChangeCalc} //On button click activates handleChangeCalc.

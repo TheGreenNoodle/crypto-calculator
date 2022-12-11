@@ -1,6 +1,5 @@
 .header {
-  font-family: "Fredoka One", cursive;
-  margin: 20px auto 0;
+  margin: 20px auto 40px;
 
   padding: 40px;
 
@@ -11,4 +10,31 @@
   box-shadow: 8px 10px;
 
   border-radius: 20px;
+}
+.fontSize{
+  font-size: 500%;
+}
+
+/* Responsiveness Width */
+@media (max-width: 1700px){
+  .fontSize {
+    font-size: 330%;
+  }
+}
+
+@media (max-width: 1300px){
+  .fontSize {
+    font-size: 300%;
+  }
+}
+
+@media (max-width: 450px){
+  .fontSize {
+    font-size: 250%;
+  }
+}
+@media (max-width: 300px){
+  .fontSize {
+    font-size: 200%;
+  }
 }

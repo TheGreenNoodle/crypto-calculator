@@ -41,8 +41,8 @@ function DoCalc(props) {
   }
 
   return (
-    <div>
-      <div className={inputStyles.inputsDiv}>
+    <div className={inputStyles.inputAndSubmitBox}>
+      <div className={inputStyles.inputGroup}>
         <Inputs
           name={firstInputName}
           handleInputs={handleInputs}

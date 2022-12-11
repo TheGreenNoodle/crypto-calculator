@@ -9,19 +9,22 @@
 
   display: inline-block;
 
-  font-size: 50px;
+  font-size: 400%;
 
   margin: 20px;
-  height: 400px;
-  width: 400px;
+  height: 20vw;
+  width: 20vw;
+}
+.submitBtn {
+  border-radius: 10px;
+  font-size: 200%;
+  margin: 20px auto;
+  height: auto;
+  width: 90%;
 }
 
 .customBtn:focus {
   box-shadow: 10px 10px black;
-}
-
-.submitBtn {
-  width: 130px;
 }
 
 .submitBtn:focus {
@@ -36,25 +39,51 @@
   box-shadow: 10px 10px black;
 }
 
-@media (max-width: 1200px){
-  .customBtn{
-    font-size: 30px;
-    height: 200px;
-    width: 200px;
+@media (max-width: 1700px){
+  .customBtn {
+    font-size: 250%;
+    height: 19vw;
+    width: 19vw;
   }
 }
 
-@media (max-width: 860px){
-  .customBtn{
-    height: 150px;
-    width: 150px;
+@media (max-width: 1310px){
+  .customBtn {
+    font-size: 200%;
+    height: 18vw;
+    width: 18vw;
   }
 }
 
-@media (max-width: 690px){
-  .customBtn{
-    height: 150px;
+@media (max-width: 1100px){
+  .customBtn {
+    height: 17vw;
+    width: 17vw;
+  }
+}
+
+@media (max-width: 900px){
+  .customBtn {
+    display: block;
+    height: 120px;
     width: 90%;
-    margin: 20px 0;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 600px){
+  .customBtn {
+    width: 95%;
+  }
+}
+
+@media (max-width: 450px){
+  .customBtn {
+    font-size: 150%;
+  }
+}
+@media (max-width: 300px){
+  .customBtn {
+    font-size: 120%;
   }
 }

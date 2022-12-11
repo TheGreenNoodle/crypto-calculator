@@ -10,16 +10,30 @@ a:hover {
 }
 
 .icon {
-  display: inline-block;
+  transform: scale(3);
+}
+.iconDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 200px;
+
+  width: 50%;
+
 }
 
 .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   font-family: "Fredoka One", cursive;
   font-weight: lighter;
   position: relative;
   bottom: 40px;
 
-  margin: auto;
+  margin: 60px auto 0;
   padding: 40px;
 
   color: #f7ff93;
@@ -31,43 +45,12 @@ a:hover {
   border-radius: 20px;
 }
 
-/* Extra Extra Large */
-@media only screen and (min-width: 2047px) {
-  a {
-    margin: 20px 90px;
-  }
-
-}
-
-/* Extra Large */
-@media only screen and (max-width: 1440px) and (min-width: 1257px) {
-  a {
-    margin: 20px 60px;
-  }
-}
-/* Large */
-@media only screen and (max-width: 1257px) and (min-width: 913px) {
-  a {
-    margin: 10px 40px;
-  }
-}
-/* Medium */
-@media only screen and (max-width: 912px) and (min-width: 844px) {
-  a {
-    margin: 5px 50px;
-  }
-}
-
-/* Small*/
-@media only screen and (max-width: 844px) and (min-width: 541px) {
-  a {
-    margin: 0 20px;
-  }
-}
-/* Extra Small  */
-@media only screen and (max-width: 540px) {
-  a {
+@media (max-width: 450px){
+  .footer{
     display: block;
-    margin: 5px 0;
+  }
+  .iconDiv{
+    margin: auto;
+    height: 150px;
   }
 }

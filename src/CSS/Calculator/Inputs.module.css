@@ -1,12 +1,20 @@
+.inputAndSubmitBox{
+  color: #f7ff93;
+  background: linear-gradient(231deg, #a85cf9, #4b7be5) fixed;
+
+  border-style: solid;
+  border-width: thick;
+  border-radius: 20px;
+}
+
 /* Inputs */
 /* Shows input title name when on smaller screen. */
 .titles {
-  display: none;
   margin: 20px;
 }
-.inputsDiv {
-  margin: 16px auto 0;
-  width: auto;
+.inputGroup {
+  margin: 30px auto 0;
+  width: 90%;
 }
 
 .inputTag {

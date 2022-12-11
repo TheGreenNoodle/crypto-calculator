@@ -28,10 +28,13 @@ function Calculator() {
   return (
     <div>
       <WhatToCalc calc={calculate} setCalc={setCalculate} />
-      <DoCalculations toCalculate={calculate} setAnswer={setAnswer} />
 
-      {/*passes button name over and the anwser. Renders both.*/}
-      <OutputAnswer toFind={calculate.toFind} answer={answer} />
+      <div className={calculatorStyles.grid}>
+        <DoCalculations toCalculate={calculate} setAnswer={setAnswer} />
+
+        {/*passes button name over and the answer. Renders both.*/}
+        <OutputAnswer toFind={calculate.toFind} answer={answer} />
+      </div>
     </div>
   );
 }

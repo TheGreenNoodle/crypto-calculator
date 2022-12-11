@@ -1,41 +1,68 @@
-/* Overall sytle */
-.calcBox {
+/* Overall style */
+.calcBox, .solution{
   color: #f7ff93;
   background: linear-gradient(231deg, #a85cf9, #4b7be5) fixed;
-
 
   border-style: solid;
   border-width: thick;
   border-radius: 20px;
 
-  font-family: "Fredoka One", cursive;
-  margin: 40px 0;
+  min-height: 200px;
+
+  margin: 20px 0;
   padding: 20px;
 }
+.solution{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: 0;
+}
+
 /* Header Calc Box*/
 .calcBoxHeader {
   margin: 5px auto 15px;
 }
 
-/* Anwser */
-.anwserStyles {
+.grid{
+  display: grid;
+  grid-template-columns: 45% auto;
+  gap: 0 20px;
+
+  margin: 20px 0;
+}
+
+.header{
+  font-size: 420%;
+}
+
+/* Answer */
+.answerStyles {
   margin: 15px auto 15px;
   overflow-wrap: break-word;
 }
 
 /* Responsiveness Width */
+@media (max-width: 1700px){
+  .header {
+    font-size: 270%;
+  }
+}
 
-/* Extra Large */
-@media only screen and (min-width: 1060px) {
-  /* Titles */
-  h1 {
-    font-size: 65px;
+@media (max-width: 1300px){
+  .header {
+    font-size: 220%;
   }
-  h2 {
-    font-size: 50px;
+}
+
+@media (max-width: 450px){
+  .header {
+    font-size: 170%;
   }
-  /* Links */
-  a {
-    font-size: 25px;
+}
+@media (max-width: 300px){
+  .header {
+    font-size: 150%;
   }
 }
