@@ -10,12 +10,7 @@ function findSoultion({ valuesArray, setAnswer, toFind }) {
     finalValue = firstValue / secondValue;
 
     //sets the value to scientic notation if over 2 trillion for what ever reson
-    if (finalValue <= 2000000000000) {
-      finalValue = finalValue.toLocaleString(undefined, {
-        minimumFractionDigits: 5,
-        maximumFractionDigits: 5,
-      });
-    } else {
+    if (finalValue >= 2000000000000) {
       finalValue = finalValue.toExponential();
     }
 
@@ -23,11 +18,7 @@ function findSoultion({ valuesArray, setAnswer, toFind }) {
   } else if (toFind === "Market Cap") {
     finalValue = secondValue * firstValue;
 
-    if (finalValue <= 2000000000000) {
-      finalValue = finalValue.toLocaleString(undefined, {
-        maximumFractionDigits: 0,
-      });
-    } else {
+    if (finalValue >= 2000000000000) {
       finalValue = finalValue.toExponential();
     }
 
@@ -35,12 +26,7 @@ function findSoultion({ valuesArray, setAnswer, toFind }) {
   } else if (toFind === "Supply") {
     finalValue = firstValue / secondValue;
 
-    if (finalValue <= 2000000000000) {
-      finalValue = finalValue.toLocaleString(undefined, {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2,
-      });
-    } else {
+    if (finalValue >= 2000000000000) {
       finalValue = finalValue.toExponential();
     }
 

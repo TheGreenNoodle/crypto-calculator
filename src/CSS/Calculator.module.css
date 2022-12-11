@@ -1,5 +1,5 @@
 /* Overall style */
-.calcBox, .solution{
+.calcBox, .solutionDiv{
   color: #f7ff93;
   background: linear-gradient(231deg, #a85cf9, #4b7be5) fixed;
 
@@ -12,12 +12,22 @@
   margin: 20px 0;
   padding: 20px;
 }
-.solution{
+.solutionDiv{
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
+
   margin: 0;
+  overflow: auto;
+}
+.titleAndAnswer{
+  overflow-wrap: break-word;
+  overflow: hidden;
+
+  margin: auto;
+
+  width: 90%;
+
 }
 
 /* Header Calc Box*/

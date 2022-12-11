@@ -19,7 +19,7 @@ function DoCalc(props) {
 
   function handleInputs(inputs) {
     // When inputs onChange is activated it passes over the values
-    // that are inputed by user.
+    // that are inputted by user.
     // Then passes over setValuesArray so that inputs can be applied to it.
     //Also passes over firstInputName and secondInputName from calculate state.
     //This is done so they can be compared with inputs.name

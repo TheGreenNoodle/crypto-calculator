@@ -4,7 +4,7 @@ function addInputsToValueArray({
   firstInputName,
   secondInputName,
 }) {
-  const inputsValue = inputs.target.value; //User inputed value
+  const inputsValue = inputs.target.value; //User inputted value
   const inputsName = inputs.target.name; //Name of the input being edited.
 
   if (inputsName === firstInputName) {

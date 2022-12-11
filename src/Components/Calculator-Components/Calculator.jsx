@@ -27,7 +27,11 @@ function Calculator() {
 
   return (
     <div>
-      <WhatToCalc calc={calculate} setCalc={setCalculate} />
+      <WhatToCalc
+        calc={calculate}
+        setCalc={setCalculate}
+        setAnswer={setAnswer}
+      />
 
       <div className={calculatorStyles.grid}>
         <DoCalculations toCalculate={calculate} setAnswer={setAnswer} />

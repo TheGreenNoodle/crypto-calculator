@@ -6,9 +6,6 @@ function Inputs(props) {
     <div>
       <h3 className={inputStyles.titles}>{props.name}</h3>
       <InputGroup className="mb-3">
-        <InputGroup.Text className={inputStyles.inputTag}>
-          {props.name} {/*Renders name of one of the two inputs*/}
-        </InputGroup.Text>
         <FormControl
           className={inputStyles.textBox}
           placeholder={props.name + " here"}

@@ -11,10 +11,12 @@ const activeBtn = `${customBtn} ${calcBtn.activeBtn}`;
 function WhatToCalc(props) {
   const calculate = props.calc;
   const setCalculate = props.setCalc;
+  const setAnswer = props.setAnswer;
 
   function handleChangeCalc(btn) {
     //Actives when the user clicks on a new button such as price or marketcap.
     const btnName = btn.target.name; //holds the name of the button clicked.
+    setAnswer("Answer Here");
     //Passes over button name and setCalculate to CalculatorFunctions.
     //Updates value of calculate to new values based on the btnName.
     changeCalc({ btnName, setCalculate });
