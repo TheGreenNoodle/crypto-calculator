@@ -1,4 +1,4 @@
-.inputAndSubmitBox{
+.inputAndSubmitBox {
   color: #f7ff93;
   background: linear-gradient(231deg, #a85cf9, #4b7be5) fixed;
 
@@ -8,8 +8,9 @@
 }
 
 /* Inputs */
-/* Shows input title name when on smaller screen. */
+/* Shows input titles name when on smaller screen. */
 .titles {
+  font-size: 400%;
   margin: 20px;
 }
 .inputGroup {
@@ -17,20 +18,14 @@
   width: 90%;
 }
 
-.inputTag {
-  background: #5534a5;
-}
-
-.inputTag,
 .textBox {
   border: none;
   color: white;
 
   box-shadow: 5px 5px black;
-}
-
-.textBox {
   background: linear-gradient(90deg, #5534a5, #a85cf9) fixed;
+
+  font-size: 200%;
 }
 
 .textBox::placeholder {
@@ -48,51 +43,31 @@
   outline-style: solid;
   outline-width: thin;
 }
-/* Extra Large */
-@media only screen and (min-width: 1060px) {
-  /* Inputs */
-  .inputTag,
-  .textBox {
-    font-size: 25px;
-  }
-  .inputsDiv {
-    width: 36.875rem;
-  }
-}
-/* Large */
-@media only screen and (max-width: 1059px) and (min-width: 963px) {
-  .inputsDiv {
-    width: 25.625rem;
-  }
-}
 
-/* Medium */
-@media only screen and (max-width: 962px) and (min-width: 740px) {
-  .inputsDiv {
-    width: 25.625rem;
-  }
-}
-
-/* Small*/
-@media only screen and (max-width: 739px) {
+/* Responsiveness Width */
+@media (max-width: 1700px) {
   .titles {
-    display: block;
-    margin: 0 0 10px;
-  }
-  .inputTag {
-    display: none;
+    font-size: 250%;
   }
   .textBox {
-    font-size: 16px;
-    border-radius: 100px !important;
+    font-size: 150%;
   }
-  .inputsDiv {
-    margin: 50px 0;
-    border-style: solid;
-    border-width: thick;
-    padding: 10px;
-    border-radius: 20px;
+}
 
-    width: auto;
+@media (max-width: 1310px) {
+  .titles {
+    font-size: 200%;
+  }
+}
+
+@media (max-width: 450px) {
+  .titles {
+    font-size: 150%;
+  }
+}
+
+@media (max-width: 300px) {
+  .titles {
+    font-size: 120%;
   }
 }

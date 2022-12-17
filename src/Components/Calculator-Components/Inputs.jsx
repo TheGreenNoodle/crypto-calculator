@@ -7,6 +7,7 @@ function Inputs(props) {
       <h3 className={inputStyles.titles}>{props.name}</h3>
       <InputGroup className="mb-3">
         <FormControl
+          autocomplete="off"
           className={inputStyles.textBox}
           placeholder={props.name + " here"}
           type="number"

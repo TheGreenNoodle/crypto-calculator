@@ -3,7 +3,7 @@
 
   text-align: center;
   margin: auto;
-  width: 70%;
+  width: 60%;
 }
 .body {
   background-color: #30aadd;
@@ -13,7 +13,18 @@
   width: 100%;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 2000px) {
+  .App {
+    width: 50%;
+  }
+}
+@media (max-width: 1500px) {
+  .App {
+    width: 70%;
+  }
+}
+
+@media (max-width: 900px) {
   .App {
     width: 90%;
   }

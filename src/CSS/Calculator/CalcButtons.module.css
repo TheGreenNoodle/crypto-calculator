@@ -12,12 +12,11 @@
   font-size: 400%;
 
   margin: 20px;
-  height: 20vw;
-  width: 20vw;
+  height: 14vw;
+  width: 14vw;
 }
 .submitBtn {
   border-radius: 10px;
-  font-size: 200%;
   margin: 20px auto;
   height: auto;
   width: 90%;
@@ -39,30 +38,53 @@
   box-shadow: 10px 10px black;
 }
 
-@media (max-width: 1700px){
+@media (max-width: 2200px) {
   .customBtn {
-    font-size: 250%;
-    height: 19vw;
-    width: 19vw;
+    height: 13vw;
+    width: 13vw;
   }
 }
 
-@media (max-width: 1310px){
+@media (max-width: 1999px) {
   .customBtn {
-    font-size: 200%;
+    height: 16vw;
+    width: 16vw;
+  }
+}
+
+@media (max-width: 1700px) {
+  .customBtn,
+  .submitBtn {
+    font-size: 250%;
+  }
+}
+
+@media (max-width: 1500px) {
+  .customBtn {
     height: 18vw;
     width: 18vw;
   }
 }
 
-@media (max-width: 1100px){
+@media (max-width: 1310px) {
+  .customBtn,
+  .submitBtn {
+    font-size: 200%;
+  }
+  .customBtn {
+    height: 18vw;
+    width: 18vw;
+  }
+}
+
+@media (max-width: 1100px) {
   .customBtn {
     height: 17vw;
     width: 17vw;
   }
 }
 
-@media (max-width: 900px){
+@media (max-width: 900px) {
   .customBtn {
     display: block;
     height: 120px;
@@ -71,19 +93,21 @@
   }
 }
 
-@media (max-width: 600px){
+@media (max-width: 600px) {
   .customBtn {
     width: 95%;
   }
 }
 
-@media (max-width: 450px){
-  .customBtn {
+@media (max-width: 450px) {
+  .customBtn,
+  .submitBtn {
     font-size: 150%;
   }
 }
-@media (max-width: 300px){
-  .customBtn {
+@media (max-width: 300px) {
+  .customBtn,
+  .submitBtn {
     font-size: 120%;
   }
 }

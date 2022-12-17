@@ -10,7 +10,7 @@ a:hover {
 }
 
 .icon {
-  transform: scale(3);
+  transform: scale(5);
 }
 .iconDiv{
   display: flex;
@@ -19,8 +19,9 @@ a:hover {
 
   height: 200px;
 
-  width: 50%;
+  margin: auto;
 
+  width: 50%;
 }
 
 .footer {
@@ -45,12 +46,8 @@ a:hover {
   border-radius: 20px;
 }
 
-@media (max-width: 450px){
+@media (max-width: 550px){
   .footer{
     display: block;
-  }
-  .iconDiv{
-    margin: auto;
-    height: 150px;
   }
 }

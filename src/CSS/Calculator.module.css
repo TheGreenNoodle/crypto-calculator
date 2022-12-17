@@ -1,5 +1,6 @@
 /* Overall style */
-.calcBox, .solutionDiv{
+.calcBox,
+.solutionDiv {
   color: #f7ff93;
   background: linear-gradient(231deg, #a85cf9, #4b7be5) fixed;
 
@@ -12,7 +13,7 @@
   margin: 20px 0;
   padding: 20px;
 }
-.solutionDiv{
+.solutionDiv {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,14 +21,13 @@
   margin: 0;
   overflow: auto;
 }
-.titleAndAnswer{
+.titleAndAnswer {
   overflow-wrap: break-word;
   overflow: hidden;
 
   margin: auto;
 
   width: 90%;
-
 }
 
 /* Header Calc Box*/
@@ -35,7 +35,7 @@
   margin: 5px auto 15px;
 }
 
-.grid{
+.grid {
   display: grid;
   grid-template-columns: 45% auto;
   gap: 0 20px;
@@ -43,36 +43,68 @@
   margin: 20px 0;
 }
 
-.header{
+.header {
   font-size: 420%;
 }
 
 /* Answer */
+.text {
+  font-size: 400%;
+}
+
 .answerStyles {
   margin: 15px auto 15px;
   overflow-wrap: break-word;
 }
 
 /* Responsiveness Width */
-@media (max-width: 1700px){
+@media (max-width: 1700px) {
   .header {
     font-size: 270%;
   }
+  .text {
+    font-size: 250%;
+  }
 }
 
-@media (max-width: 1300px){
+@media (max-width: 1310px) {
+  .text {
+    font-size: 200%;
+  }
+}
+
+@media (max-width: 1300px) {
   .header {
     font-size: 220%;
   }
 }
 
-@media (max-width: 450px){
+@media (max-width: 750px) {
+  .grid {
+    grid-template-columns: auto 45%;
+  }
+}
+
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 100%;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 450px) {
   .header {
     font-size: 170%;
   }
+  .text {
+    font-size: 150%;
+  }
 }
-@media (max-width: 300px){
+@media (max-width: 300px) {
   .header {
     font-size: 150%;
+  }
+  .text {
+    font-size: 120%;
   }
 }
