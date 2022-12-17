@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Button } from "react-bootstrap";
 import Inputs from "./Inputs";
 import addInputsToValueArray from "./Functions/addInputsToValueArray";
@@ -16,6 +16,14 @@ function DoCalc(props) {
   // Holds two values so that will be used to find final answer.
   const [valuesArray, setValuesArray] = useState(["", ""]);
   // holds final answer.
+
+  //Refs are used to determine if the input is active
+  // This is done so that when the user clicks on the input the value
+  // returns to its number value. EX 89454. When the user clicks off the
+  // number in the input can be seen as 89,454. This helps with readability
+  // and dose not break the calculation code.
+  const inputOne = useRef(null);
+  const inputTwo = useRef(null);
 
   function handleInputs(inputs) {
     // When inputs onChange is activated it passes over the values
@@ -37,6 +45,7 @@ function DoCalc(props) {
     // trying toFind findSoultion dose the appropriate math for it.
     // Then the result of that math is applied to answer with the setAnswer
     // function.
+
     findSoultion({ valuesArray, setAnswer, toFind });
   }
 
@@ -44,12 +53,14 @@ function DoCalc(props) {
     <div className={inputStyles.inputAndSubmitBox}>
       <div className={inputStyles.inputGroup}>
         <Inputs
+          ref={inputOne}
           name={firstInputName}
           handleInputs={handleInputs}
           value={valuesArray[0]}
         />
 
         <Inputs
+          ref={inputTwo}
           name={secondInputName}
           handleInputs={handleInputs}
           value={valuesArray[1]}

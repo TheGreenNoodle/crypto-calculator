@@ -8,10 +8,12 @@ function OutputAnswer(props) {
   return (
     <div className={calculatorStyles.solutionDiv}>
       <div className={calculatorStyles.titleAndAnswer}>
-        <h1 className={calculatorStyles.text}>{props.toFind}</h1>
-        <h2 className={calculatorStyles.text}>
-          {isNaN(answer) ? "Answer Here" : commaNumber(answer)}
-        </h2>
+        <h1 className={calculatorStyles.title}>{props.toFind}</h1>
+        <div className={calculatorStyles.centerSolution}>
+          <h2 className={calculatorStyles.solution}>
+            {isNaN(answer) ? "Answer Here" : commaNumber(answer)}
+          </h2>
+        </div>
       </div>
     </div>
   );

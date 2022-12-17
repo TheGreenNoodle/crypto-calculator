@@ -14,10 +14,7 @@
   padding: 20px;
 }
 .solutionDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  padding: 0 10px;
   margin: 0;
   overflow: auto;
 }
@@ -27,6 +24,7 @@
 
   margin: auto;
 
+  height: 100%;
   width: 90%;
 }
 
@@ -47,9 +45,41 @@
   font-size: 420%;
 }
 
-/* Answer */
-.text {
+/* Answer Box */
+.title {
+  border-style: none solid solid;
+  border-width: thick;
+  border-radius: 0 0 20px 20px;
+
+  padding: 30px 0 20px;
+  margin: 0 auto 20px;
+}
+
+.title,
+.solution {
   font-size: 400%;
+}
+
+.centerSolution {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-style: solid;
+  border-width: thick;
+  border-radius: 20px;
+
+  overflow: hidden;
+  word-wrap: break-word;
+
+  padding: 20px;
+
+  height: 60%;
+}
+
+.solution {
+  overflow: hidden;
+  word-wrap: break-word;
 }
 
 .answerStyles {
@@ -62,13 +92,15 @@
   .header {
     font-size: 270%;
   }
-  .text {
+  .title,
+  .solution {
     font-size: 250%;
   }
 }
 
 @media (max-width: 1310px) {
-  .text {
+  .title,
+  .solution {
     font-size: 200%;
   }
 }
@@ -96,7 +128,8 @@
   .header {
     font-size: 170%;
   }
-  .text {
+  .title,
+  .solution {
     font-size: 150%;
   }
 }
@@ -104,7 +137,8 @@
   .header {
     font-size: 150%;
   }
-  .text {
+  .title,
+  .solution {
     font-size: 120%;
   }
 }
