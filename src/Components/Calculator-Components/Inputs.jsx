@@ -13,11 +13,32 @@ const Inputs = forwardRef((props, ref) => {
   const value = rawValue.replaceAll(",", "");
 
   const [addCommas, setAddCommas] = useState(true);
+  //Decides if observer is active so it is not re run a million times
+  const [active, setActive] = useState(false);
 
-  // const input = ref.current;
-  // const valueAttribute = input.getAttribute("value");
+  // create a new instance of `MutationObserver` named `observer`,
+  // passing it a callback function
+  function addObserver() {
+    const input = ref.current;
 
-  // console.log(valueAttribute);
+    if (input === null) {
+      window.setTimeout(addObserver, 500);
+      return;
+    }
+
+    const observeChange = new MutationObserver(() => {
+      setAddCommas(false);
+      setActive(true);
+
+      console.log("change");
+    });
+
+    observeChange.observe(input, { attributes: true });
+  }
+
+  if (!active) {
+    addObserver();
+  }
 
   return (
     <div>
@@ -28,10 +49,10 @@ const Inputs = forwardRef((props, ref) => {
           autoComplete="off"
           className={inputStyles.textBox}
           placeholder={props.name + " here"}
-          type="text"
+          type="number"
           onChange={props.handleInputs} //Runs handleInput to update valuesArray
           name={props.name}
-          value={document.onchange !== ref.current ? valueWithCommas : value}
+          value={props.value}
         />
       </InputGroup>
     </div>

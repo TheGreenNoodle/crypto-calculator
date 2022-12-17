@@ -118,7 +118,11 @@
 }
 
 @media (max-width: 700px) {
+  .centerSolution {
+    height: 70%;
+  }
   .grid {
+    grid-template-rows: auto 500px;
     grid-template-columns: 100%;
     gap: 20px;
   }
